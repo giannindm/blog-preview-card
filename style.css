@@ -34,11 +34,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
   
-/* 6. Improve media defaults */
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-}
   
 /* 7. Inherit fonts for form controls */
 input, button, textarea, select {
@@ -83,6 +78,10 @@ body {
 .card__preview {
     border-radius: 10px;
     overflow: hidden;
+    width: 279px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 .card__content {
