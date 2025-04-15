@@ -1,0 +1,137 @@
+:root {
+    font-family: "Figtree", sans-serif;
+
+    --clr-yellow: hsl(47, 88%, 63%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-gray-500: hsl(0, 0%, 42%);
+    --clr-gray-950: hsl(0, 0%, 7%);
+
+    --fw-regular: 500;
+    --fw-bold: 800;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+body {
+    font-size: 16px;
+    font-weight: var(--fw-regular);
+    background: var(--clr-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-gray-950);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    background: var(--clr-white);
+    border: solid 1px var(--clr-gray-950);
+    border-radius: 20px;
+    padding: 24px;
+    gap: 24px;
+    box-shadow: 8px 8px 0 0 black;
+}
+
+.card__preview {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card__badge {
+    background: var(--clr-yellow);
+    font-weight: var(--fw-bold);
+    font-size: 0.75em;
+    width: 73px;
+    text-align: center;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.card__publish-date {
+    font-size: 0.75em;
+}
+
+.card__title {
+    font-size: 1.25em;
+    font-weight: var(--fw-bold);
+}
+
+.card__title:hover {
+    color: var(--clr-yellow);
+    cursor: pointer;
+}
+
+.card__descr {
+    font-size: 0.875em;
+    color: var(--clr-gray-500);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author__photo {
+    height: 32px;
+    width: 32px;
+}
+
+.author__name {
+    font-size: 0.875em;
+    font-weight: var(--fw-bold);
+}
